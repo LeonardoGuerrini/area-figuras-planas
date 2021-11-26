@@ -12,12 +12,15 @@ class Losango:
 
                 print("")
 
-                print(f"Operação:\nA = D * d / 2\nA = {diagmaior} * {diagmenor} / 2\nA =",(diagmaior*diagmenor) / 2)
+                print(
+                    f"Operação:\nA = D * d / 2\nA = {diagmaior} * {diagmenor} / 2\nA =", (diagmaior*diagmenor) / 2)
 
-                repetir = str(input("Você deseja fazer novamente? (sim/nao): "))
-                if repetir.lower() == "nao":
-                    print("\nObrigado por usar o programa! :)")
-                    
+                if str(input("Deseja continuar (sim/nao):")).lower() in ['s', 'sim']:
+                    print("\nContinuando...\n")
+
+                else:
+                    print("Obrigado por usar o programa! :)")
+
                     break
 
             except:
