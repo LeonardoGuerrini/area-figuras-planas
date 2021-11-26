@@ -1,26 +1,66 @@
 from circulo import Circulo
+from losango import Losango
 from quadrado import Quadrado
 from retangulo import Retangulo
-from losango import Losango
+from trapezio import Trapezio
+from triangulo import Triangulo
+
 
 class Opcoes:
 
     def opcoesx():
         while True:
             try:
-                print("[1] Quadrado\n[2] Retângulo\n[3] Losângo\n[4] Círculo\n")
-                escolha = int(input("Insira sua escolha (1/2/3/4): "))
-                if escolha == 1:
-                    Quadrado.quadradox()
+                escolha = input('''
+**************************
+
+[ c ] Calcular área
+[ s ] Sair do programa
+
+**************************
                 
-                elif escolha == 2:
-                    Retangulo.retangulox()
+[Sua resposta]: ''')
 
-                elif escolha == 3:
-                    Losango.losangox()
+                if escolha.lower() == "s":
+                    print("\nObrigado por usar o programa! :)")
 
-                elif escolha == 4:
-                    Circulo.circulox()
+                    break
+                
+                elif escolha.lower() == "c":
+                    area = input('''\n\n
 
-            except ValueError:
-                print("Erro! O programa aceita apenas números!")
+************************************************
+
+Escolha a figura que deseja calcular a área:
+
+[ q ] Quadrado
+[ r ] Retângulo
+[ t ] Triângulo
+[ l ] Losângo
+[ z ] Trapézio
+[ c ] Círculo
+
+************************************************
+
+[Sua resposta]: ''')
+
+                    if area.lower() == "q":
+                        Quadrado.quadradox()
+                    
+                    elif area.lower() == "r":
+                        Retangulo.retangulox()
+
+                    elif area.lower() == "t":
+                        Triangulo.triangulox()
+                    
+                    elif area.lower() == "l":
+                        Losango.losangox()
+
+                    elif area.lower() == "z":
+                        Trapezio.trapeziox()
+
+                    elif area.lower() == "c":
+                        Circulo.circulox()
+
+            except:
+                print("\nErro!")
