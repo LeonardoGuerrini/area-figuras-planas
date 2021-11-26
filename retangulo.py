@@ -1,17 +1,24 @@
 class Retangulo:
-
+    
     def retangulox():
         while True:
             try:
+                
                 print("Área do retângulo: A = b * h")
+
                 base = int(input("Informe o valor da base: "))
                 altura = int(input("Informe o valor da altura: "))
-                print("Resultado:", base * altura)
+                print("\nResultado:", base * altura) # resultado
 
-                repetir = input("Você deseja fazer novamente? (sim/nao): ")
+                print("")
+
+                print(f"Operação:\nA = b * h\nA = {base} * {altura}\nA =",base*altura)
+
+                repetir = str(input("\nVocê deseja fazer novamente? (sim/nao): "))
                 if repetir.lower() == "nao":
                     print("\nObrigado por usar o programa! :)")
-                    exit()
-                    
-            except ValueError:
-                print("Erro! O Programa aceita apenas números!")
+
+                    break
+
+            except:
+                print("\nErro!")
