@@ -12,11 +12,14 @@ class Circulo:
 
                 print("")
 
-                print(f"Operação:\nA = Pi * r²\nA = {pi} * {raio}²\nA =", pi * (raio * raio))
+                print(
+                    f"Operação:\nA = Pi * r²\nA = {pi} * {raio}²\nA =", pi * (raio * raio))
 
-                repetir = str(input("Você deseja repetir? (sim/nao): "))
-                if repetir.lower() == "nao":
-                    print("\nObrigado por usar o programa! :)")
+                if str(input("Deseja continuar (sim/nao):")).lower() in ['s', 'sim']:
+                    print("\nContinuando...\n")
+
+                else:
+                    print("Obrigado por usar o programa! :)")
 
                     break
 
